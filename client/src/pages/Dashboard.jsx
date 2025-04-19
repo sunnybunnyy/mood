@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import axios from 'axios'
 import { Link } from 'react-router-dom';
-import { format } from 'dat-fns';
+import { format } from 'date-fns';
 
 export default function Dashboard() {
     const { user } = useAuth();
