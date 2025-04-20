@@ -77,7 +77,7 @@ export default function MoodEntry() {
                         min="1"
                         max="10"
                         value={dayRating}
-                        onChange={(e) => setDayRating(parseIng(e.target.value))}
+                        onChange={(e) => setDayRating(parseInt(e.target.value))}
                         className="w-full"
                     />
                 </div>

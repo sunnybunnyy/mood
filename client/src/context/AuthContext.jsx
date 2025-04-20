@@ -28,6 +28,7 @@ export function AuthProvider({ children }) {
             setUser(res.data);
             setHabits(res.data.habits || []);
         } catch (err) {
+            console.error('Failed to load user:', err);
             logout();
         }
     };
