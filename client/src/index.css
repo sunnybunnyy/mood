@@ -1,78 +1,55 @@
 @import "tailwindcss";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@theme {
+  /* Color palette - converting from your original format */
+  --color-primary-50: rgb(240 249 255);
+  --color-primary-100: rgb(224 242 254);
+  --color-primary-200: rgb(186 230 253);
+  --color-primary-300: rgb(125 211 252);
+  --color-primary-400: rgb(56 189 248);
+  --color-primary-500: rgb(14 165 233);
+  --color-primary-600: rgb(2 132 199);
+  --color-primary-700: rgb(3 105 161);
+  --color-primary-800: rgb(7 89 133);
+  --color-primary-900: rgb(12 74 110);
+  
+  --color-happy-50: rgb(240 253 244);
+  --color-happy-100: rgb(220 252 231);
+  --color-happy-200: rgb(187 247 208);
+  --color-happy-300: rgb(134 239 172);
+  --color-happy-400: rgb(74 222 128);
+  --color-happy-500: rgb(34 197 94);
+  --color-happy-600: rgb(22 163 74);
+  --color-happy-700: rgb(21 128 61);
+  --color-happy-800: rgb(22 101 52);
+  --color-happy-900: rgb(20 83 45);
+  
+  --color-neutral-50: rgb(255 251 235);
+  --color-neutral-100: rgb(254 243 199);
+  --color-neutral-200: rgb(253 230 138);
+  --color-neutral-300: rgb(252 211 77);
+  --color-neutral-400: rgb(251 191 36);
+  --color-neutral-500: rgb(245 158 11);
+  --color-neutral-600: rgb(217 119 6);
+  --color-neutral-700: rgb(180 83 9);
+  --color-neutral-800: rgb(146 64 14);
+  --color-neutral-900: rgb(120 53 15);
+  
+  --color-sad-50: rgb(254 242 242);
+  --color-sad-100: rgb(254 226 226);
+  --color-sad-200: rgb(254 202 202);
+  --color-sad-300: rgb(252 165 165);
+  --color-sad-400: rgb(248 113 113);
+  --color-sad-500: rgb(239 68 68);
+  --color-sad-600: rgb(220 38 38);
+  --color-sad-700: rgb(185 28 28);
+  --color-sad-800: rgb(153 27 27);
+  --color-sad-900: rgb(127 29 29);
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* Font family */
+  --font-sans: 'Inter', sans-serif;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
-
-/* Custom base styles */
 @layer base {
   body {
     @apply bg-gray-50 text-gray-900 font-sans antialiased;
@@ -89,20 +66,19 @@ button:focus-visible {
   button {
     @apply transition-colors duration-200;
   }
-  
+}
+
+@layer components {
   .btn-primary {
-    @apply bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-lg shadow-sm;
+    @apply bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-lg;
   }
   
   .btn-secondary {
-    @apply bg-white hover:bg-gray-50 text-gray-700 border border-gray-300 font-medium py-2 px-4 rounded-lg shadow-sm;
+    @apply bg-white hover:bg-gray-50 text-gray-700 border border-gray-300 font-medium py-2 px-4 rounded-lg;
   }
-}
 
-/* Custom components */
-@layer components {
   .card {
-    @apply bg-white rounded-xl shadow-sm p-6;
+    @apply bg-white rounded-xl p-6;
   }
   
   .badge {
@@ -121,3 +97,6 @@ button:focus-visible {
     @apply bg-sad-100 text-sad-800;
   }
 }
+
+/* Font family import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
