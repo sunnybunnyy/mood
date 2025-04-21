@@ -14,7 +14,6 @@ function App() {
     <Router>
       <AuthProvider>
         <div className="min-h-screen bg-gray-50">
-          <Navbar />
           <div className="container mx-auto p-4">
             <Routes>
               <Route path="/login" element={<Login />} />

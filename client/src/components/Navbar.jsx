@@ -5,13 +5,13 @@ export default function Navbar() {
     const { user, logout } = useAuth();
 
     return (
-        <nav>
+        <nav className="">
             <div className="container mx-auto px-4 py-3 flex justify-between items-center">
                 <Link to="/" className="text-xl font-bold text-yellow-600">
                     Mood Tracker
                 </Link>
 
-                {user && (
+                {user ? (
                     <div className="flex items-center space-x-4">
                         <Link to="/entry" className="text-gray-700 hover:text-yellow-600">
                             New Entry
@@ -25,6 +25,15 @@ export default function Navbar() {
                         >
                             Logout
                         </button>
+                    </div>
+                ) : (
+                    <div className="flex items-center space-x-4">
+                        <Link to="/login" className="text-gray-700 hover:text-yellow-600">
+                            Login
+                        </Link>
+                        <Link to="/register" className="text-gray-700 hover:text-yellow-600">
+                            Register
+                        </Link>
                     </div>
                 )}
             </div>

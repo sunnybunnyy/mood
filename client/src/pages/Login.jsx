@@ -23,7 +23,10 @@ export default function Login() {
             <div className='flex items-center mb-6'>
                 <img src="lemon.gif" alt="Lemon Logo" className='w-12 h-12 object-contain' />
             </div>
-            <h1 className="text-2xl font-bold mb-4">Login</h1>
+            <div className='mb-6 text-left'>
+                <h1 className="text-3xl font-normal text-[#1f1f1f] mb-1">Sign in</h1>
+                <h2 className="font-normal text-[#1f1f1f] text-base">to continue to Mood</h2>
+            </div>
             {error && <div className='text-red-500 mb-4'>{error}</div>}
             <form onSubmit={handleSubmit}>
                 <div className='mb-4'>
