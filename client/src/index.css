@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  /* Color palette - converting from your original format */
-  --color-primary-50: rgb(240 249 255);
-  --color-primary-100: rgb(224 242 254);
-  --color-primary-200: rgb(186 230 253);
-  --color-primary-300: rgb(125 211 252);
-  --color-primary-400: rgb(56 189 248);
-  --color-primary-500: rgb(14 165 233);
-  --color-primary-600: rgb(2 132 199);
-  --color-primary-700: rgb(3 105 161);
-  --color-primary-800: rgb(7 89 133);
-  --color-primary-900: rgb(12 74 110);
+  /* Color palette */
+  --color-primary-50: rgb(255 253 240);
+  --color-primary-100: rgb(254 252 224);
+  --color-primary-200: rgb(253 248 186);
+  --color-primary-300: rgb(252 241 125);
+  --color-primary-400: rgb(248 232 56);
+  --color-primary-500: rgb(233 220 14);
+  --color-primary-600: rgb(199 187 2);
+  --color-primary-700: rgb(161 152 3);
+  --color-primary-800: rgb(133 126 7);
+  --color-primary-900: rgb(110 104 12);
   
   --color-happy-50: rgb(240 253 244);
   --color-happy-100: rgb(220 252 231);
