@@ -11,7 +11,7 @@ export default function Navbar() {
                     Mood Tracker
                 </Link>
 
-                {user ? (
+                {user && (
                     <div className="flex items-center space-x-4">
                         <Link to="/entry" className="text-gray-700 hover:text-yellow-600">
                             New Entry
@@ -25,15 +25,6 @@ export default function Navbar() {
                         >
                             Logout
                         </button>
-                    </div>
-                ) : (
-                    <div className="flex items-center space-x-4">
-                        <Link to="/login" className="text-gray-700 hover:text-yellow-600">
-                            Login
-                        </Link>
-                        <Link to="/register" className="text-gray-700 hover:text-yellow-600">
-                            Register
-                        </Link>
                     </div>
                 )}
             </div>
