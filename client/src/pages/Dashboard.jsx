@@ -32,7 +32,7 @@ export default function Dashboard() {
                 <h1 className="text-2xl font-bold">Your Mood Journal</h1>
                 <Link
                     to="/entry"
-                    className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                    className="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600">
                     Add New Entry
                 </Link>
             </div>
@@ -82,7 +82,7 @@ export default function Dashboard() {
             <div className="mb-4">
                 <Link
                     to="/analytics"
-                    className="text-blue-500 hover:underline"
+                    className="text-yellow-500 hover:underline"
                 >
                     View Analytics →
                 </Link>

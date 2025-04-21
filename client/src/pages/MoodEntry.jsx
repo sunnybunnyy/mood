@@ -114,7 +114,7 @@ export default function MoodEntry() {
                 <div className="flex space-x-4">
                     <button
                         type="submit"
-                        className="flex-1 bg-blue-500 text-white py-2 rounded hover:bg-blue-600"
+                        className="flex-1 bg-yellow-500 text-white py-2 rounded hover:bg-yellow-600"
                     >
                         Save Entry
                     </button>

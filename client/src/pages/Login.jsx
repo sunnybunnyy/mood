@@ -43,13 +43,13 @@ export default function Login() {
                         required
                     />
                 </div>
-                <button type="submit" className="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">
+                <button type="submit" className="w-full bg-yellow-500 text-white p-2 rounded hover:bg-yellow-600">
                     Login
                 </button>
             </form>
             <p className='mt-4 text-center'>
                 Don't have an account?{' '}
-                <button onClick={() => navigate('/register')} className='text-blue-500'>
+                <button onClick={() => navigate('/register')} className='text-yellow-500'>
                     Register
                 </button>
             </p>

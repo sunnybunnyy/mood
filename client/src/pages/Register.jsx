@@ -76,18 +76,18 @@ export default function Register() {
                     <button
                         type="button"
                         onClick={() => setHabits([...habits, ''])}
-                        className='mt-2 text-sm text-blue-500'
+                        className='mt-2 text-sm text-yellow-500'
                     >
                         + Add Habit
                     </button>
                 </div>
-                <button type="submit" className="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">
+                <button type="submit" className="w-full bg-yellow-500 text-white p-2 rounded hover:bg-yellow-600">
                     Register
                 </button>
             </form>
             <p className='mt-4 text-center'>
                 Already have an account?{' '}
-                <button onClick={() => navigate('/login')} className="text-blue-500">
+                <button onClick={() => navigate('/login')} className="text-yellow-500">
                     Login
                 </button>
             </p>
