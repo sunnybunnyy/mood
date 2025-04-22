@@ -83,7 +83,6 @@ export default function Analytics() {
 
     return (
         <div>
-            <h1 className='text-2xl font-bold mb-6'>Your Mood Analytics</h1>
             <div className='grid md:grid-cols-2 gap-6 mb-8'>
                 <div className='bg-white p-4 rounded shadow'>
                     <h2 className="text-xl font-semibold mb-4">Mood Distribution</h2>
