@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  /* Color palette */
+  /* Colour palette */
   --color-primary-50: rgb(255 253 240);
   --color-primary-100: rgb(254 252 224);
   --color-primary-200: rgb(253 248 186);

@@ -28,17 +28,7 @@ export default function Dashboard() {
 
     return (
         <div>
-            <div className='flex justify-between items-center mb-6'>
-                <h1 className="text-2xl font-bold">Your Mood Journal</h1>
-                <Link
-                    to="/entry"
-                    className="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600">
-                    Add New Entry
-                </Link>
-            </div>
-
             <div className="mb-8">
-                <h2 className="text-xl font-semibold mb-4">Recent Entries</h2>
                 {entries.length === 0 ? (
                     <p>No entries yet. Add your first entry!</p>
                 ) : (
@@ -46,7 +36,7 @@ export default function Dashboard() {
                         {entries.slice(0, 5).map((entry) => (
                             <div key={entry._id} className='p-4 bg-white rounded shadow'>
                                 <div className='flex justify-between items-start'>
-                                    <div>
+                                    <div className='text-left'>
                                         <h3 className="font-medium">
                                             {format(new Date(entry.date), 'MMMM d, yyyy')}
                                         </h3>
@@ -61,8 +51,8 @@ export default function Dashboard() {
                                             entry.mood === 'happy'
                                                 ? 'bg-green-100 text-green-800'
                                                 : entry.mood === 'neutral'
-                                                ? 'bg-yellow-100 text-yellow-800'
-                                                : 'bg-red-100 text-red-800'
+                                                    ? 'bg-yellow-100 text-yellow-800'
+                                                    : 'bg-red-100 text-red-800'
                                         }`}
                                     >
                                         {entry.mood}
@@ -77,15 +67,6 @@ export default function Dashboard() {
                         ))}
                     </div>
                 )}
-            </div>
-
-            <div className="mb-4">
-                <Link
-                    to="/analytics"
-                    className="text-yellow-500 hover:underline"
-                >
-                    View Analytics →
-                </Link>
             </div>
         </div>
     );
